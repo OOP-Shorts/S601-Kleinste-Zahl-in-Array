@@ -2,7 +2,15 @@ public class IntArrayMinimum {
 
     /* Schreiben Sie eine Methode, die ein int[] als Parameter übergeben bekommt und die kleinste Zahl in diesem Array zurückgibt. */
     public static int intArrayMinimum(int[] values) {
-        return 0;
+        int currMin = Integer.MAX_VALUE;
+
+        for (int i = 0; i < values.length; i++) {
+            if(values[i] < currMin) {
+                currMin = values[i];
+            }
+        }
+
+        return currMin;
     }
 
 
